@@ -10,16 +10,20 @@
         <div>
             <ul>
                 <li ng-repeat='branchs in tree'>
-                    
+                    {{ branchs.id }}
                    <span>{{ branchs.name }}</span>
                     <ul>
-                        <li ng-repeat='props in branchs.child'>
-                            {{ props.id }}
-                            <span> {{ props.name }} </span>
+                        <li>
+                            {{ branchs.child.id }}
+                            <span>{{ branchs.child.name }}</span>
+                        </li>
+                        <li ng-repeat='branch in branchs.child'>
+                            {{ branch.id }}
+                            <span> {{ branch.name }} </span>
                             <ul>
-                                <li>
-                                    {{ props.child.id }}
-                                    <span> {{ props.child.name }} </span>
+                                <li ng-repeat='other in branch'>
+                                    {{ other.id }}
+                                    <span> {{ other.name }}</span>
                                 </li>
                             </ul>
                         </li>
