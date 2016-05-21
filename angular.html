@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app='myApp'>
+    <head>
+        <title>AngularJS</title>
+        <meta charset="utf-8">
+        <link rel='stylesheet' type='text/css' href='angular.css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    </head>
+    <body ng-controller="appCtrl">
+        <div>
+            <ul>
+                <li ng-repeat='branchs in tree'>
+                    
+                   <span>{{ branchs.name }}</span>
+                    <ul>
+                        <li ng-repeat='props in branchs.child'>
+                            {{ props.id }}
+                            <span> {{ props.name }} </span>
+                            <ul>
+                                <li>
+                                    {{ props.child.id }}
+                                    <span> {{ props.child.name }} </span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src='angular.js'></script>
+    </body>
+</html>

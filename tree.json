@@ -1,0 +1,56 @@
+{
+  "1":{
+    "id" : "1",
+    "name" : "catégorie 1",
+    "child" : [
+      {
+      "id" : "11",
+      "name" : "catégorie 1.1"
+      },
+      {
+      "id" : "12",
+      "name" : "catégorie 1.2",
+      "child" : {
+        "id" : "121",
+        "name" : "catégorie 1.2.1"
+        }
+      }
+    ]
+  },
+  "2":{
+    "id" : "2",
+    "name" : "catégorie 2",
+    "child" : [
+      {
+      "id" : "21",
+      "name" : "catégorie 2.1"
+      },
+      {
+      "id" : "22",
+      "name" : "catégorie 2.2"
+      }
+    ]
+  },
+  "3":{
+    "id" : "3",
+    "name" : "catégorie 3"
+  },
+  "4":{
+    "id" : "4",
+    "name" : "catégorie 4",
+    "child" : {
+      "id" : "41",
+      "name" : "catégorie 4.1",
+      "child" : [
+        {
+          "id" : "411",
+          "name" : "catégorie 4.1.1"
+        },
+        {
+          "id" : "412",
+          "name" : "catégorie 4.1.2"
+        }
+      ]
+    }
+  }
+}
