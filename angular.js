@@ -1,7 +1,9 @@
+/* global angular */
+
 var app = angular.module('myApp', []);
 
-app.controller('appCtrl', function($scope, request) {
-  request.success(function(data){
+app.controller('appCtrl', function($scope, httpRequest) {
+   httpRequest.success(function(data){
        
        $scope.tree = data;
        
@@ -9,10 +11,9 @@ app.controller('appCtrl', function($scope, request) {
     
 });
 
-
-app.factory('request', function($http){
+app.factory('httpRequest', function($http) {
     
- return $http.get('tree.json');
+ return $http.get('tree.json');   
     
 });
 
