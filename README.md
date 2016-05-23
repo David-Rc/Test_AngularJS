@@ -34,4 +34,4 @@ $http.get('content.json')
 
 Votre requête HTTP doit être ''wrappée'' dans une factory, vous devrez également modifier le champ ''name'' dans cette même factory.
 
-## Preview : https://plnkr.co/edit/TswmomLnpfi4YHS0m55P?p=preview 
+### Preview : https://plnkr.co/edit/TswmomLnpfi4YHS0m55P?p=preview 
