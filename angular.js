@@ -1,5 +1,6 @@
 /* global angular */
 
+
 var app = angular.module('myApp', []);
 
 app.factory('appFactory', ['$http', function($http){
@@ -11,13 +12,6 @@ app.factory('appFactory', ['$http', function($http){
         return $http.get(url);
         
     },
-    
-    renommeName: function(data){
-        
-        
-        
-    },
-    
         
     }
     
@@ -29,9 +23,29 @@ app.controller("appCtrl", ['$scope', 'appFactory', function($scope, appFactory){
         
         $scope.tree = data;
         
-    })
+    });
     
 }]);
+
+app.filter('point', function(){
+    return function(input) {
+        var point = ".";
+        var output;
+        console.log('input : '+input);
+        if(input === undefined){
+            return '';
+        }
+        if(input.length > 1){
+            output = input.split('');
+            output = output.join(point);
+            console.log("1 : ",output);
+        }else{
+            output = input;
+        }
+        return output + point;
+    
+    };
+});
 
 
 
