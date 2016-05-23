@@ -2,20 +2,36 @@
 
 var app = angular.module('myApp', []);
 
-app.controller('appCtrl', function($scope, httpRequest) {
-   httpRequest.success(function(data){
-       
-       $scope.tree = data;
-       
-   });
+app.factory('appFactory', ['$http', function($http){
     
-});
+    return {
+        
+        recupData: function(url){
+        
+        return $http.get(url);
+        
+    },
+    
+    renommeName: function(data){
+        
+        
+        
+    },
+    
+        
+    }
+    
+}]);
 
-app.factory('httpRequest', function($http) {
+app.controller("appCtrl", ['$scope', 'appFactory', function($scope, appFactory){
     
- return $http.get('tree.json');   
+    appFactory.recupData('tree.json').success(function(data){
+        
+        $scope.tree = data;
+        
+    })
     
-});
+}]);
 
 
 
