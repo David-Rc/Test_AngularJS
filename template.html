@@ -1,0 +1,18 @@
+<ul>
+    <li ng-repeat='branchs in tree'>
+            {{ branchs.id | point }}
+        <span>{{ branchs.name }}</span>
+        <ul>
+          <li ng-repeat='branch in branchs.child'>
+                    {{ branch.id | point }}
+                 <span> {{ branch.name }} </span>
+              <ul>
+                 <li ng-repeat='other in branch'>
+                        {{ other.id | point }}
+                  <span> {{ other.name }} </span>
+                </li>
+              </ul>
+          </li>
+       </ul>
+    </li>
+</ul>

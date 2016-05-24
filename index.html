@@ -7,29 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     </head>
     <body ng-controller="appCtrl">
-        <div>
-            <ul>
-                <li ng-repeat='branchs in tree'>
-                    {{ branchs.id | point }}
-                   <span>{{ branchs.name }}</span>
-                    <ul>
-                       <!-- <li>
-                            {{ branchs.child.id | point }}
-                            <span>{{ branchs.child.name }}</span>
-                        </li> -->
-                        <li ng-repeat='branch in branchs.child'>
-                            {{ branch.id | point }}
-                            <span> {{ branch.name }} </span>
-                            <ul>
-                                <li ng-repeat='other in branch'>
-                                    {{ other.id | point }}
-                                    <span> {{ other.name }} </span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+        <div my-customer>
         </div>
         <script src='app.js'></script>
     </body>

@@ -84,3 +84,9 @@ app.filter('point', function(){
 
   };
 });
+
+app.directive('myCustomer', function(){
+    return{
+        templateUrl: "template.html"   
+};
+});
